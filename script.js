@@ -7,21 +7,47 @@ window.addEventListener("keydown", checkKeyPressed, false);
 
 window.addEventListener("keyup", release, false);
 
+let times = 0;
+if(times>5)
+{
+  fall();
+}
 
 function checkKeyPressed(evt) {
-  if(evt.keyCode == "38"){
+  if(evt.keyCode == "38")//jump
+  {
     document.getElementById("sonic").src="sonic/sonic_up.jpg"
-  myFunction()}
-  else if(evt.keyCode == "40")
+    times++;
+    console.log(times);
+    if(times>5)
+    {
+      fall();
+    }
+    else{
+  myFunction()
+    }
+  }
+  else if(evt.keyCode == "40")//down
   {
   document.getElementById("sonic").src="sonic/sonic_down.jpg"
-
   }
+  else if(evt.keyCode == "37")//left 
+  {
+  document.getElementById("sonic").src="sonic/sonic_left.jpg"
+   times++;
+    console.log(times);
+  }
+  else if(evt.keyCode == "39")//right
+  {
+    document.getElementById("sonic").src="sonic/sonic_right.jpg"
+  }
+
+  
 }
 
 function release(evt)
   {
-    if(evt.keyCode=="40")
+    if(evt.keyCode=="40" || evt.keyCode=="37" || evt.keyCode=="39")
   document.getElementById("sonic").src="sonic/sonic_reg.jpg"
   }
 
@@ -33,3 +59,22 @@ function next()
 {
   document.getElementById("sonic").src="sonic/sonic_reg.jpg"
 }
+
+
+function fall() {
+  timeout = setTimeout(falldown, 500);
+  times=0;
+}
+
+function falldown()
+{
+  document.getElementById("sonic").src="sonic/sonic_fall.jpg"
+  timeout = setTimeout(floor, 400);
+}
+
+function floor()
+{
+  document.getElementById("sonic").src="sonic/sonic_land.jpg"
+}
+
+
