@@ -31,16 +31,10 @@ function checkKeyPressed(evt) {
   else if(evt.keyCode == "37")//left 
   {
   document.getElementById("sonic").src="sonic/sonic_left.jpg"
-   times++;
-    console.log(times);
-   
   }
   else if(evt.keyCode == "39")//right
   {
 document.getElementById("sonic").src="sonic/sonic_right.jpg"
-    times++;
-    console.log(times);
-    
   }
 
   
@@ -49,14 +43,9 @@ document.getElementById("sonic").src="sonic/sonic_right.jpg"
 function release(evt)
   {
     if(evt.keyCode=="40" || evt.keyCode=="37" || evt.keyCode=="39"){
-      if(times>5)
-      {
-        fall();
-      }
-      else
-      {
+
   document.getElementById("sonic").src="sonic/sonic_reg.jpg"
-      }
+
     }
   }
 
@@ -71,7 +60,7 @@ function next()
 
 
 function fall() {
-  timeout = setTimeout(falldown, 500);
+  timeout = setTimeout(falldown, 400);
   times=0;
 }
 
