@@ -8,10 +8,7 @@ window.addEventListener("keydown", checkKeyPressed, false);
 window.addEventListener("keyup", release, false);
 
 let times = 0;
-if(times>5)
-{
-  fall();
-}
+
 
 function checkKeyPressed(evt) {
   if(evt.keyCode == "38")//jump
@@ -36,10 +33,14 @@ function checkKeyPressed(evt) {
   document.getElementById("sonic").src="sonic/sonic_left.jpg"
    times++;
     console.log(times);
+   
   }
   else if(evt.keyCode == "39")//right
   {
-    document.getElementById("sonic").src="sonic/sonic_right.jpg"
+document.getElementById("sonic").src="sonic/sonic_right.jpg"
+    times++;
+    console.log(times);
+    
   }
 
   
@@ -47,8 +48,16 @@ function checkKeyPressed(evt) {
 
 function release(evt)
   {
-    if(evt.keyCode=="40" || evt.keyCode=="37" || evt.keyCode=="39")
+    if(evt.keyCode=="40" || evt.keyCode=="37" || evt.keyCode=="39"){
+      if(times>5)
+      {
+        fall();
+      }
+      else
+      {
   document.getElementById("sonic").src="sonic/sonic_reg.jpg"
+      }
+    }
   }
 
 function myFunction() {
