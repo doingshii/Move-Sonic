@@ -10,7 +10,7 @@
 
 body
 {
-  background-image:linear-gradient(red,green);
+  background-image:linear-gradient(white);
   background-size: cover;
   background-position: center;
 }
@@ -33,4 +33,31 @@ body
   background-color: blue;
   border: outset white;
   color: white;
+}
+
+#borderRad
+{
+  width:150px;
+  height:50px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  position:absolute;
+  top:100px;
+  background-color:#ffc7c7;
+  border: inset red;
+  color: red;
+}
+
+#borderRad:hover
+{
+  background-color: white;
+  border: outset red;
+  color: blue;
+}
+
+#sonic
+{
+  border-radius: 0px;;
 }

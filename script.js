@@ -1,5 +1,5 @@
 let timeout;
-
+//controlls sonic's movement
 window.addEventListener("keydown", checkKeyPressed, false);
 window.addEventListener("keydown", checkKeyPressed, false);
 window.addEventListener("keydown", checkKeyPressed, false);
@@ -40,6 +40,7 @@ document.getElementById("sonic").src="sonic/sonic_right.jpg"
   
 }
 
+//can hold down these buttons only (not up)
 function release(evt)
   {
     if(evt.keyCode=="40" || evt.keyCode=="37" || evt.keyCode=="39"){
@@ -49,16 +50,18 @@ function release(evt)
     }
   }
 
+
 function myFunction() {
   timeout = setTimeout(next, 500);
 }
 
+//reset
 function next()
 {
   document.getElementById("sonic").src="sonic/sonic_reg.jpg"
 }
 
-
+//sonic falling 
 function fall() {
   timeout = setTimeout(falldown, 400);
   times=0;
@@ -76,7 +79,7 @@ function floor()
 }
 
 
-
+//chaning background image
 let clicked = 0;
 
 function my()
@@ -95,4 +98,24 @@ document.body.style.backgroundImage = thing;
   console.log(thing);
   
 } 
+
+let radius = 0;
+
+//changing border radius
+function border()
+{
+  radius+=10;
+  console.log(radius)
+  if(radius>100)
+  {
+    radius=0;
+  }
+  let border = document.getElementById("sonic");
+  border.style.borderRadius = radius + "px";
+}
+
+//function border
+
+
+
 
