@@ -114,16 +114,28 @@ function border()
   border.style.borderRadius = radius + "px";
 }
 
+let showing = true;
 //function hide buttons
 function hide()
 {
   let butt = document.getElementById("borderRad");
-  butt.style.visibility = "hidden";
   let but = document.getElementById("change");
+  if(showing)
+  {
+  butt.style.visibility = "hidden";
   but.style.visibility = "hidden";
   /*let butt = document.getElementsByClassName("press");
   butt.style.visibility = "hidden";*/
-  //document.getElementById("hide").innerHTML="wfef";
+  document.getElementById("hide").innerHTML="Show Buttons";
+    showing=false;
+  }
+  else
+  {
+    butt.style.visibility = "visible";
+    but.style.visibility = "visible";
+    document.getElementById("hide").innerHTML="Hide Buttons";
+    showing=true;
+  }
 }
 
 

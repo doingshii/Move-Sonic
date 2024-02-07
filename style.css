@@ -6,6 +6,8 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 50%;
+  margin-bottom: 50%;
 }
 
 body
@@ -48,7 +50,6 @@ body
   margin-left: auto;
   margin-right: auto;
   margin-top: 20px;
-  position:absolute;
   top:100px;
   background-color:#ffc7c7;
   border: inset red;
@@ -58,12 +59,18 @@ body
 
 #borderRad:hover
 {
-  background-color: white;
-  border: outset red;
-  color: blue;
+  background-color: red;
+  border: outset white;
+  color: white;
 }
 
 #sonic
 {
   border-radius: 0px;;
+}
+
+#hide
+{
+ width:100px;
+  height:50px;
 }
