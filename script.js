@@ -76,3 +76,23 @@ function floor()
 }
 
 
+
+let clicked = 0;
+
+function my()
+{
+  /*let colorChange = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
+  
+document.body.style.backgroundImage = "linear-gradient(" + colorChange + ", " + colorChange + ", " + colorChange + ")";
+  clicked++;
+  console.log("button was clicked" +clicked+"times")*/
+
+const colormix =["red", "blue", "white", "black", "yellow", "chartreuse", "orange", "DarkOrchid", "pink", "DarkTurquoise", "DeepSkyBlue","DodgerBlue","DeepPink","HotPink","LightCoral","LimeGreen","Moccasin","PapayaWhip","DarkBlue","DarkGrey","Gray","Maroon"];
+
+let thing = "linear-gradient(" + colormix[Math.floor(Math.random() * colormix.length)]+ "," + colormix[Math.floor(Math.random() * colormix.length)] + "," + colormix[Math.floor(Math.random() * colormix.length)] + ")";
+
+document.body.style.backgroundImage = thing;
+  console.log(thing);
+  
+} 
+
