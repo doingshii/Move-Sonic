@@ -1,16 +1,14 @@
 let timeout;
 //controlls sonic's movement
 window.addEventListener("keydown", checkKeyPressed, false);
-window.addEventListener("keydown", checkKeyPressed, false);
-window.addEventListener("keydown", checkKeyPressed, false);
-window.addEventListener("keydown", checkKeyPressed, false);
-
 window.addEventListener("keyup", release, false);
 
 let times = 0;
 
 
 function checkKeyPressed(evt) {
+  let help = document.getElementById("help");
+  help.style.visibility="hidden";
   if(evt.keyCode == "38")//jump
   {
     document.getElementById("sonic").src="sonic/sonic_up.jpg"
