@@ -123,7 +123,7 @@ function hide()
   but.style.visibility = "hidden";
   /*let butt = document.getElementsByClassName("press");
   butt.style.visibility = "hidden";*/
-  //document.getElementById("hide").button.innerHTML="wfef";
+  //document.getElementById("hide").innerHTML="wfef";
 }
 
 
