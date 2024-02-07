@@ -106,7 +106,7 @@ function border()
 {
   radius+=10;
   console.log(radius)
-  if(radius>100)
+  if(radius>150)
   {
     radius=0;
   }
