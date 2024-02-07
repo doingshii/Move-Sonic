@@ -114,8 +114,17 @@ function border()
   border.style.borderRadius = radius + "px";
 }
 
-//function border
-
+//function hide buttons
+function hide()
+{
+  let butt = document.getElementById("borderRad");
+  butt.style.visibility = "hidden";
+  let but = document.getElementById("change");
+  but.style.visibility = "hidden";
+  /*let butt = document.getElementsByClassName("press");
+  butt.style.visibility = "hidden";*/
+  //document.getElementById("hide").button.innerHTML="wfef";
+}
 
 
 
