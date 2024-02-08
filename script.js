@@ -86,7 +86,7 @@ function my()
   
 document.body.style.backgroundImage = "linear-gradient(" + colorChange + ", " + colorChange + ", " + colorChange + ")";
   clicked++;
-  console.log("button was clicked" +clicked+"times")*/
+  console.log("button was clicked " +clicked+" times")*/
 
 const colormix =["red", "blue", "white", "black", "yellow", "chartreuse", "orange", "DarkOrchid", "pink", "DarkTurquoise", "DeepSkyBlue","DodgerBlue","DeepPink","HotPink","LightCoral","LimeGreen","Moccasin","PapayaWhip","DarkBlue","DarkGrey","Gray","Maroon"];
 
@@ -118,10 +118,12 @@ function hide()
 {
   let butt = document.getElementById("borderRad");
   let but = document.getElementById("change");
+  let bu = document.getElementById("cust");
   if(showing)
   {
   butt.style.visibility = "hidden";
   but.style.visibility = "hidden";
+  bu.style.visibility = "hidden";
   /*let butt = document.getElementsByClassName("press");
   butt.style.visibility = "hidden";*/
   document.getElementById("hide").innerHTML="Show Buttons";
@@ -131,8 +133,22 @@ function hide()
   {
     butt.style.visibility = "visible";
     but.style.visibility = "visible";
+    bu.style.visibility = "visible";
     document.getElementById("hide").innerHTML="Hide Buttons";
     showing=true;
+  }
+}
+
+//allows custom colors
+function custom()
+{
+  let d = confirm("Only use the colors shown in the color box. If you use a color that is not in the box, the background will not change.\n Press cancel if you need to see the color box");
+  if(d==true)
+  {
+    let color1 = prompt("Enter the top color");
+    let color2 = prompt("Enter the middle color");
+    let color3 = prompt("Enter the bottom color");
+  document.body.style.backgroundImage = "linear-gradient(" + color1 + ", " + color2 + ", " + color3 + ")";
   }
 }
 

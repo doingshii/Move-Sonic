@@ -22,6 +22,10 @@ body
   height:400px;
 }
 
+#color-box
+{
+  visibility: hidden;
+}
 .press
 {
   visibility: visible;
@@ -38,6 +42,7 @@ body
   background-color:#80e5ff;
   border: inset blue;
   color: blue;
+  visibility: visible;
 }
 
 #change:hover
@@ -77,4 +82,12 @@ body
 {
  width:100px;
   height:50px;
+}
+
+#cust 
+{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2px;
 }
